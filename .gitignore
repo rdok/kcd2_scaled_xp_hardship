@@ -1,0 +1,6 @@
+*.zip
+node_modules/
+.idea/
+*.log
+temp_build_localization/
+.env

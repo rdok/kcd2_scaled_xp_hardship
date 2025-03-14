@@ -1,0 +1,29 @@
+{
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rdok/kcd2_scaled_xp_hardship"
+  },
+  "author": "Rizart Dokollari",
+  "name": "kcd2_scaled_xp_hardship",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "7z-bin": "Nexus-Mods/7z-bin",
+    "npm-check": "^6.0.1",
+    "prettier": "^3.3.3",
+    "@google-cloud/translate": "^8.5.1",
+    "dotenv": "^16.4.7",
+    "xml2js": "^0.6.2"
+  },
+  "scripts": {
+    "dev": "node scripts/build.js --dev",
+    "prod": "node scripts/build.js --prod",
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write .",
+    "update:dependencies": "npm-check -u",
+    "generate_readme": "node scripts/generate_readme.js",
+    "generate_readme:watch": "nodemon --watch documentation -e md scripts/generate_readme.js"
+  },
+  "engines": {
+    "node": "22"
+  }
+}

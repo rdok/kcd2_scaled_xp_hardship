@@ -1,0 +1,30 @@
+services:
+  test_runner:
+    build:
+      context: .
+      dockerfile: docker/busted.Dockerfile
+    volumes: [".:/data"]
+    entrypoint: sh -c "busted --verbose /data"
+  test_watcher:
+    build:
+      context: .
+      dockerfile: docker/busted.Dockerfile
+    volumes: [".:/data"]
+    entrypoint: sh -c "find /data -type f | entr -c busted --verbose /data"
+    tty: true
+  ci-cd:
+    build:
+      context: .
+      dockerfile: docker/nodejs.Dockerfile
+    volumes: [".:/app"]
+    environment: ["MODE=dev", "VERSION=main"]
+    command: node scripts/build.js --env=${MODE} --version=${VERSION}
+    user: "${UID}"
+  localise:
+    build:
+      context: .
+      dockerfile: docker/nodejs.Dockerfile
+    volumes: [".:/app"]
+    environment: ["MODE=dev", "VERSION=main"]
+    command: node scripts/localise.js --env=${MODE} --version=${VERSION}
+    user: "${UID}"

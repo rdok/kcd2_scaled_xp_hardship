@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="barbora"
+          xsi:noNamespaceSchemaLocation="../database.xsd">
+    <!--
+    - buff_class_id="4": Perk Buff
+    - buff_exclusivity_id="1": more instances of the same buff (the same id) are not allowed on one target
+    - buff_lifetime_id: "1"=LongTerm, "0"=ShortTerm
+    - buff_ui_type_id="4": Perk
+    - buff_ui_visibility_id="1": HUD
+    - buff_params: "xpm*[value]" where value is the multiplier (e.g., xpm*0.6 reduces XP to 60% of base, a 40% decrease)
+    -->
+    <buffs version="1">
+
+        <buff
+                buff_class_id="4"
+                buff_exclusivity_id="1"
+                buff_id="d2365160-a006-45b0-9822-4c777f40e779"
+                buff_lifetime_id="1"
+                buff_name="perk_fading_strength_dawn_of_pain"
+                buff_params="xpm*0.50"
+                buff_ui_type_id="4"
+                duration="-1"
+                icon_id="perk_warmonger"
+                implementation="Cpp:Constant"
+                is_persistent="true"
+        />
+        <buff
+                buff_class_id="4"
+                buff_exclusivity_id="1"
+                buff_id="7dcc25c9-a613-4c5f-a46e-ff22cc3f8ae7"
+                buff_lifetime_id="1"
+                buff_name="perk_fading_strength_shade_of_weakness"
+                buff_params="xpm*0.35"
+                buff_ui_type_id="4"
+                duration="-1"
+                icon_id="perk_warmonger"
+                implementation="Cpp:Constant"
+                is_persistent="true"
+        />
+        <buff
+                buff_class_id="4"
+                buff_exclusivity_id="1"
+                buff_id="97ed6a60-f75d-422c-9d3a-cc50c260741c"
+                buff_lifetime_id="1"
+                buff_name="perk_fading_strength_blight_of_vigor"
+                buff_params="xpm*0.20"
+                buff_ui_type_id="4"
+                duration="-1"
+                icon_id="perk_warmonger"
+                implementation="Cpp:Constant"
+                is_persistent="true"
+        />
+        <buff
+                buff_class_id="4"
+                buff_exclusivity_id="1"
+                buff_id="788eb34e-7848-44f4-8e62-5b5be6f9d61b"
+                buff_lifetime_id="1"
+                buff_name="perk_fading_strength_reign_of_frail"
+                buff_params="xpm*0.15"
+                buff_ui_type_id="4"
+                duration="-1"
+                icon_id="perk_warmonger"
+                implementation="Cpp:Constant"
+                is_persistent="true"
+        />
+        <buff
+                buff_class_id="4"
+                buff_exclusivity_id="1"
+                buff_id="c9f30857-7140-41a2-ba01-cee47060e763"
+                buff_lifetime_id="1"
+                buff_name="perk_fading_strength_abyss_of_decline"
+                buff_params="xpm*0.10"
+                buff_ui_type_id="4"
+                duration="-1"
+                icon_id="perk_warmonger"
+                implementation="Cpp:Constant"
+                is_persistent="true"
+        />
+        <buff
+                buff_class_id="4"
+                buff_exclusivity_id="1"
+                buff_id="162c4d4d-40d8-4a3e-b23f-ef30f8c84bf7"
+                buff_lifetime_id="1"
+                buff_name="perk_fading_strength_fall_of_might"
+                buff_params="xpm*0.05"
+                buff_ui_type_id="4"
+                duration="-1"
+                icon_id="perk_warmonger"
+                implementation="Cpp:Constant"
+                is_persistent="true"
+        />
+    </buffs>
+</database>

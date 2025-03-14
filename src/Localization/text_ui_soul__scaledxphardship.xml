@@ -1,0 +1,79 @@
+<Table>
+    <Row>
+        <Cell>perk_fading_strength_dawn_of_pain_perk_name</Cell>
+        <Cell>Fading Strength: Dawn of Pain</Cell>
+    </Row>
+    <Row>
+        <Cell>perk_fading_strength_dawn_of_pain_desc</Cell>
+        <Cell>Any action earns 50% less experience.</Cell>
+    </Row>
+    <Row>
+        <Cell>perk_fading_strength_dawn_of_pain_lore_desc</Cell>
+        <Cell>Henry’s bones groan from that cursed fall, every move a battle with his broken frame. He clenches his fists, but the old spark fades fast.</Cell>
+    </Row>
+
+    <Row>
+        <Cell>perk_fading_strength_shade_of_weakness_perk_name</Cell>
+        <Cell>Fading Strength: Shade of Weakness</Cell>
+    </Row>
+    <Row>
+        <Cell>perk_fading_strength_shade_of_weakness_desc</Cell>
+        <Cell>Any action earns 65% less experience.</Cell>
+    </Row>
+    <Row>
+        <Cell>perk_fading_strength_shade_of_weakness_lore_desc</Cell>
+        <Cell>Henry’s arms tire, scarred by war’s grind, his mother’s screams still sharp from Skalitz’s end. Her blood stains hands that can’t hold steady.</Cell>
+    </Row>
+
+    <Row>
+        <Cell>perk_fading_strength_blight_of_vigor_perk_name</Cell>
+        <Cell>Fading Strength: Blight of Vigor</Cell>
+    </Row>
+    <Row>
+        <Cell>perk_fading_strength_blight_of_vigor_desc</Cell>
+        <Cell>Any action earns 80% less experience.</Cell>
+    </Row>
+    <Row>
+        <Cell>perk_fading_strength_blight_of_vigor_lore_desc</Cell>
+        <Cell>Henry’s chest heaves, drained by ceaseless fights, Theresa’s voice a faint call through the haze. She saved him once, but he can’t save himself.</Cell>
+    </Row>
+
+    <Row>
+        <Cell>perk_fading_strength_reign_of_frail_perk_name</Cell>
+        <Cell>Fading Strength: Reign of Frail</Cell>
+    </Row>
+    <Row>
+        <Cell>perk_fading_strength_reign_of_frail_desc</Cell>
+        <Cell>Any action earns 85% less experience.</Cell>
+    </Row>
+    <Row>
+        <Cell>perk_fading_strength_reign_of_frail_lore_desc</Cell>
+        <Cell>Henry’s legs buckle, worn by endless foes, his father’s hammer silent in the ashes. Martin’s strength is a ghost he can’t call back.</Cell>
+    </Row>
+
+    <Row>
+        <Cell>perk_fading_strength_abyss_of_decline_perk_name</Cell>
+        <Cell>Fading Strength: Abyss of Decline</Cell>
+    </Row>
+    <Row>
+        <Cell>perk_fading_strength_abyss_of_decline_desc</Cell>
+        <Cell>Any action earns 90% less experience.</Cell>
+    </Row>
+    <Row>
+        <Cell>perk_fading_strength_abyss_of_decline_lore_desc</Cell>
+        <Cell>Henry’s spirit wanes, shadowed by relentless loss, the echoes of Sasau’s bells a distant taunt. His will bends under a burden too vast to lift.</Cell>
+    </Row>
+
+    <Row>
+        <Cell>perk_fading_strength_fall_of_might_perk_name</Cell>
+        <Cell>Fading Strength: Fall of Might</Cell>
+    </Row>
+    <Row>
+        <Cell>perk_fading_strength_fall_of_might_desc</Cell>
+        <Cell>Any action earns 95% less experience.</Cell>
+    </Row>
+    <Row>
+        <Cell>perk_fading_strength_fall_of_might_lore_desc</Cell>
+        <Cell>Henry’s soul cracks, crushed by war’s ruin, Radzig’s faith a chain he can’t bear. The bastard son swings a blade that feels like lead.</Cell>
+    </Row>
+</Table>

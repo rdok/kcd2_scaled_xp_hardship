@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="barbora"
+          xsi:noNamespaceSchemaLocation="../database.xsd">
+    <!--
+         refers to the speech stat
+        -->
+    <perks version="1">
+
+        <perk
+                autolearnable="false"
+                icon_id="perk_warmonger"
+                perk_id="b69b86bd-fd94-4179-8131-5a6b62c6ab6a"
+                perk_name="Fading Strength: Dawn of Pain"
+                perk_ui_desc="perk_fading_strength_dawn_of_pain_desc"
+                perk_ui_lore_desc="perk_fading_strength_dawn_of_pain_lore_desc"
+                perk_ui_name="perk_fading_strength_dawn_of_pain_perk_name"
+                visibility="1"
+        />
+
+        <perk
+                autolearnable="false"
+                icon_id="perk_warmonger"
+                perk_id="08262370-e762-4e83-974e-c0b4967b1515"
+                perk_name="Fading Strength: Shade of Weakness"
+                perk_ui_desc="perk_fading_strength_shade_of_weakness_desc"
+                perk_ui_lore_desc="perk_fading_strength_shade_of_weakness_lore_desc"
+                perk_ui_name="perk_fading_strength_shade_of_weakness_perk_name"
+                visibility="1"
+        />
+
+        <perk
+                autolearnable="false"
+                icon_id="perk_warmonger"
+                perk_id="0e1a71b9-e1f5-46a6-b42f-287e4c7a4e39"
+                perk_name="Fading Strength: Blight of Vigor"
+                perk_ui_desc="perk_fading_strength_blight_of_vigor_desc"
+                perk_ui_lore_desc="perk_fading_strength_blight_of_vigor_lore_desc"
+                perk_ui_name="perk_fading_strength_blight_of_vigor_perk_name"
+                visibility="1"
+        />
+
+        <perk
+                autolearnable="false"
+                icon_id="perk_warmonger"
+                perk_id="75cc7fcf-d475-4ae0-940c-21068ecd67a2"
+                perk_name="Fading Strength: Reign of Frail"
+                perk_ui_desc="perk_fading_strength_reign_of_frail_desc"
+                perk_ui_lore_desc="perk_fading_strength_reign_of_frail_lore_desc"
+                perk_ui_name="perk_fading_strength_reign_of_frail_perk_name"
+                visibility="1"
+        />
+
+        <perk
+                autolearnable="false"
+                icon_id="perk_warmonger"
+                perk_id="af99b773-b7c2-4e0a-8c1d-2885b954bb7b"
+                perk_name="Fading Strength: Abyss of Decline"
+                perk_ui_desc="perk_fading_strength_abyss_of_decline_desc"
+                perk_ui_lore_desc="perk_fading_strength_abyss_of_decline_lore_desc"
+                perk_ui_name="perk_fading_strength_abyss_of_decline_perk_name"
+                visibility="1"
+        />
+
+        <perk
+                autolearnable="false"
+                icon_id="perk_warmonger"
+                perk_id="8adf9382-a351-4988-9e98-9056d062f979"
+                perk_name="Fading Strength: Fall of Might"
+                perk_ui_desc="perk_fading_strength_fall_of_might_desc"
+                perk_ui_lore_desc="perk_fading_strength_fall_of_might_lore_desc"
+                perk_ui_name="perk_fading_strength_fall_of_might_perk_name"
+                visibility="1"
+        />
+    </perks>
+</database>

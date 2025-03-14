@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="barbora"
+          xsi:noNamespaceSchemaLocation="../database.xsd">
+
+    <perk_buffs version="1">
+
+        <perk_buff
+                perk_id="b69b86bd-fd94-4179-8131-5a6b62c6ab6a"
+                buff_id="d2365160-a006-45b0-9822-4c777f40e779"
+        />
+
+        <perk_buff
+                perk_id="08262370-e762-4e83-974e-c0b4967b1515"
+                buff_id="7dcc25c9-a613-4c5f-a46e-ff22cc3f8ae7"
+        />
+
+        <perk_buff
+                perk_id="0e1a71b9-e1f5-46a6-b42f-287e4c7a4e39"
+                buff_id="97ed6a60-f75d-422c-9d3a-cc50c260741c"
+        />
+
+        <perk_buff
+                perk_id="75cc7fcf-d475-4ae0-940c-21068ecd67a2"
+                buff_id="788eb34e-7848-44f4-8e62-5b5be6f9d61b"
+        />
+
+        <perk_buff
+                perk_id="af99b773-b7c2-4e0a-8c1d-2885b954bb7b"
+                buff_id="c9f30857-7140-41a2-ba01-cee47060e763"
+        />
+
+        <perk_buff
+                perk_id="8adf9382-a351-4988-9e98-9056d062f979"
+                buff_id="162c4d4d-40d8-4a3e-b23f-ef30f8c84bf7"
+        />
+
+    </perk_buffs>
+</database>

@@ -1,0 +1,2 @@
+[![nexus-mods-page](https://img.shields.io/badge/Mod-Scaled%20XP%20Hardship%20-bf4848?style=flat-square–=nexusmods)](https://www.nexusmods.com/kingdomcomedeliverance2/mods/1336) [![github-repository](https://img.shields.io/badge/Open-Source-2ea44f?style=flat-square&logo=github)](https://github.com/rdok/kcd2_scaled_xp_hardship) [![Steam Workshop](https://img.shields.io/badge/Steam%20Workshop-1b2838?style=flat-square&logo=steam)](https://steamcommunity.com/sharedfiles/filedetails/?id=3444071358)  
+

@@ -1,1 +1,2 @@
-> Tightens the game’s XP progression as the player's level increases, making experience points harder to come by over time. XP earnings are adjusted to increase leveling difficulty, with reductions in XP gained from actions and increases in XP needed for each level based on the player’s main level. This approach ensures a balanced early game while steadily ramping up the challenge.
+Tightens the game’s XP progression as the player's level increases, making experience points harder to come by over time. XP earnings are adjusted to increase leveling difficulty, with reductions in XP gained from actions and increases in XP needed for each level based on the player’s main level. This approach ensures a balanced early game while steadily ramping up the challenge.
+ 

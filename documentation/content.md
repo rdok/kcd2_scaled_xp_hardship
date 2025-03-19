@@ -11,9 +11,8 @@ Lvl 21 - 25      → XP: 10  (-90%)    (Abyss of Decline)
 Lvl 28 - 30      → XP:  5  (-95%)    (Fall of Might)
 ```
 
-## Lore: The Hard Road to Strength
-For Henry, the path to growing stronger grows rougher every day. What started as an easy rise—learning from fights and cunning deeds—has turned into a brutal struggle after a harsh fall left a lingering shadow on his spirit, sapping his progress. The lively battles and bustling towns, once rich with lessons, now feel like a kingdom running thin, where every bit of skill comes harder. The more he learns, the less experience each swing or sly step brings, a burden born from that tumble. Henry fights on, but the world doesn’t make it easy.
-
 ### How XP Reduction Works
-
 The mod creates custom perks & buffs that are automatically swapped by the mod to reduce XP across all skills based on main level thresholds.
+
+## Lore: The Hard Road to Strength
+As Henry becomes more skilled in his chosen crafts—whether it’s the art of swordplay, the stealth of a thief, or the cunning of a diplomat—he finds that the world of Bohemia offers him less and less in return. At first, every fight, every task, and every encounter was a teacher, each one building upon the last to make him stronger and wiser. But as he masters his chosen paths, the lessons become fewer and harder to come by. It’s like how a master blacksmith, skilled in forging the finest blades, struggles to learn the ways of the apothecary or the scribe. The more Henry specializes, the less the world has to teach him in those areas, as if Bohemia itself recognizes his expertise and withholds its secrets. Yet, Henry presses on, knowing that true greatness comes not from ease but from the relentless pursuit of mastery, even when progress grows slow and demanding.

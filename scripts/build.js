@@ -9,6 +9,7 @@ const {
     cpSync,
     readdirSync,
     statSync,
+    renameSync // Added for potential use in compressToPak
 } = require("fs");
 const { join, resolve, relative } = require("path");
 const { execSync } = require("child_process");
@@ -79,6 +80,15 @@ function prepareBuild() {
     cpSync(manifestFile, join(temporaryBuildDirectory, "mod.manifest"));
     console.log("Copied mod.manifest to temp_build");
     console.log("temp_build contents after copy:", readdirSync(temporaryBuildDirectory));
+
+    const eulaFile = join(sourceDirectory, "modding_eula.txt");
+    const destEulaFile = join(temporaryBuildDirectory, "modding_eula.txt");
+    if (existsSync(eulaFile)) {
+        cpSync(eulaFile, destEulaFile);
+        console.log(`Copied modding_eula.txt to ${destEulaFile}`);
+    } else {
+        console.warn(`Warning: modding_eula.txt not found at ${eulaFile}`);
+    }
 
     const luaFilePath = join(
         temporaryBuildDirectory,
@@ -174,7 +184,6 @@ function packData() {
     const modPakFile = join(dataDirectory, `${modIdentifier}.pak`);
     compressToPak(dataDirectory, modPakFile);
 
-    // Remove development directories (Libs and Scripts) after packing
     const libsDir = join(dataDirectory, "Libs");
     const scriptsDir = join(dataDirectory, "Scripts");
     if (existsSync(libsDir)) {
@@ -190,7 +199,6 @@ function packData() {
     mkdirSync(localizationBaseDir, { recursive: true });
 
     if (environment === "dev") {
-        // In dev mode, use the source English XML directly
         const sourceEnglishXml = join(sourceDirectory, "Localization", "text_ui_soul__scaledxphardship.xml");
         if (!existsSync(sourceEnglishXml)) {
             console.error(`ERROR: Source English XML not found at '${sourceEnglishXml}'`);
@@ -207,7 +215,6 @@ function packData() {
         rmSync(englishDir, { recursive: true, force: true });
         console.log(`Packed English into ${languagePakFile} from source XML`);
     } else {
-        // Production mode: use translated files
         console.log(`Loading translations from: ${tempLocalizationDirectory}`);
 
         if (!existsSync(tempLocalizationDirectory)) {
@@ -261,7 +268,6 @@ function packData() {
         });
     }
 
-    // Remove any stray .xml files in Localization/
     const localizationContents = readdirSync(localizationBaseDir);
     localizationContents.forEach(item => {
         const fullPath = join(localizationBaseDir, item);
@@ -283,11 +289,40 @@ function packMod(outputFileName) {
         rmSync(finalZipPath);
     }
 
-    const localizationBaseDir = join(temporaryBuildDirectory, "Localization");
-    console.log(`Localization contents before zipping: ${readdirSync(localizationBaseDir)}`);
-    const dataBaseDir = join(temporaryBuildDirectory, "Data");
-    console.log(`Data contents before zipping: ${readdirSync(dataBaseDir)}`);
+    // Create a new temporary directory structure with modIdentifier as the root
+    const modRootDir = join(temporaryBuildDirectory, modIdentifier);
+    mkdirSync(modRootDir, { recursive: true });
 
+    // Move Data, Localization, mod.manifest, and modding_eula.txt into modIdentifier directory
+    const dataDir = join(temporaryBuildDirectory, "Data");
+    const localizationDir = join(temporaryBuildDirectory, "Localization");
+    const manifestPath = join(temporaryBuildDirectory, "mod.manifest");
+    const eulaPath = join(temporaryBuildDirectory, "modding_eula.txt");
+
+    if (existsSync(dataDir)) {
+        cpSync(dataDir, join(modRootDir, "Data"), { recursive: true });
+        rmSync(dataDir, { recursive: true, force: true });
+        console.log(`Moved Data to ${join(modRootDir, "Data")}`);
+    }
+    if (existsSync(localizationDir)) {
+        cpSync(localizationDir, join(modRootDir, "Localization"), { recursive: true });
+        rmSync(localizationDir, { recursive: true, force: true });
+        console.log(`Moved Localization to ${join(modRootDir, "Localization")}`);
+    }
+    if (existsSync(manifestPath)) {
+        cpSync(manifestPath, join(modRootDir, "mod.manifest"));
+        rmSync(manifestPath);
+        console.log(`Moved mod.manifest to ${join(modRootDir, "mod.manifest")}`);
+    }
+    if (existsSync(eulaPath)) {
+        cpSync(eulaPath, join(modRootDir, "modding_eula.txt"));
+        rmSync(eulaPath);
+        console.log(`Moved modding_eula.txt to ${join(modRootDir, "modding_eula.txt")}`);
+    }
+
+    console.log(`Mod directory contents before zipping: ${readdirSync(modRootDir)}`);
+
+    // Zip the modIdentifier directory
     const sevenZipBinary = join(
         rootDirectory,
         "node_modules",
@@ -295,7 +330,7 @@ function packMod(outputFileName) {
         "linux",
         "7zzs",
     );
-    const sevenZipCommand = `"${sevenZipBinary}" a -r "${finalZipPath}" "${join(temporaryBuildDirectory, "Data")}" "${join(temporaryBuildDirectory, "Localization")}" "${join(temporaryBuildDirectory, "mod.manifest")}"`;
+    const sevenZipCommand = `"${sevenZipBinary}" a -r "${finalZipPath}" "${modRootDir}"`;
     console.log(`Zipping final mod: ${sevenZipCommand}`);
     execSync(sevenZipCommand);
 
